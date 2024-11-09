@@ -7,3 +7,7 @@ EARL follows a Model-Driven Software Development approach (MDSD), which facilita
 * [Releases and Changelog](https://github.com/twiniars/EARL/releases)
 * Author profie - https://www.robotyka.ia.pw.edu.pl/team/twiniarski/
 * Scientific paper with a complete description of the initial version of EARL - https://www.mdpi.com/2079-9292/9/2/379. **Please cite it while publishing articles that relates to EARL**.
+
+## Contribution
+
+* User feedback and contribution is welcome with issues https://github.com/twiniars/MeROS/issues
