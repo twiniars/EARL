@@ -10,4 +10,4 @@ EARL follows a Model-Driven Software Development approach (MDSD), which facilita
 
 ## Contribution
 
-* User feedback and contribution is welcome with issues https://github.com/twiniars/MeROS/issues
+* User feedback and contribution is welcome with issues https://github.com/twiniars/EARL/issues
