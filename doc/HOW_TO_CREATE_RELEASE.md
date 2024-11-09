@@ -9,6 +9,5 @@
 7. (If needed) Save enterprise architect EARL profile as **earl-X-Y-Z-ea-profile.xml**, where X.Y.Z is the release number,
 8. Create release and tag X.Y.Z
 9. Upload new documents (documentation, poster, profile)
-10. Modify Changlelog
 11. Modify README.md to link to new documents
 12. Pull repository on local PC
