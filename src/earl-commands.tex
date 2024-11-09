@@ -1,0 +1,528 @@
+% !TeX root = earl-1_3.tex
+% !TeX spellcheck = en_GB
+% !TEX encoding = utf8
+
+%\usepackage{xstring}
+\usepackage{xifthen}
+
+\newcommand{\mus}[0]{\!\_\!}
+
+\newcommand{\estar}[1]{$^\star$}
+\newcommand{\elnawias}[1]{<<}
+\newcommand{\epnawias}[1]{>>}
+
+\newcommand{\esys}[1]
+{
+  \ifthenelse{\isempty{#1}}{\mathit{sys}}{\mathit{#1/sys}}
+}
+
+\newcommand{\ea}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{a}}{\mathit{#1/a}}
+}
+
+\newcommand{\ega}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ga}}{\mathit{#1/ga}}
+}
+
+\newcommand{\egs}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{gs}}{\mathit{#1/gs}}
+}
+
+%\newcommand{\eigs}[1]
+%{
+%	\ifthenelse{\isempty{#1}}{\mathit{igs}}{\mathit{#1/igs}}
+%}
+%
+%\newcommand{\eegs}[1]
+%{
+%	\ifthenelse{\isempty{#1}}{\mathit{egs}}{\mathit{#1/egs}}
+%}
+
+\newcommand{\el}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{l}}{\mathit{#1/l}}
+}
+
+\newcommand{\egl}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{gl}}{\mathit{#1/gl}}
+}
+
+\newcommand{\ecsve}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{cs\mus ve}}{\mathit{#1/cs\mus ve}}
+}
+
+\newcommand{\evecs}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ve\mus cs}}{\mathit{#1/ve\mus cs}}
+}
+
+\newcommand{\evere}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ve\mus re}}{\mathit{#1/ve\mus re}}
+}
+
+\newcommand{\ereve}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{re\mus ve}}{\mathit{#1/re\mus ve}}
+}
+
+\newcommand{\ecsvr}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{cs\mus vr}}{\mathit{#1/cs\mus vr}}
+}
+
+\newcommand{\evrcs}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{vr\mus cs}}{\mathit{#1/vr\mus cs}}
+}
+
+\newcommand{\evrrr}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{vr\mus rr}}{\mathit{#1/vr\mus rr}}
+}
+
+\newcommand{\errvr}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{rr\mus vr}}{\mathit{#1/rr\mus vr}}
+}
+
+\newcommand{\eaa}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{a\mus a}}{\mathit{#1/a\mus a}}
+}
+
+%to chyba kiedyś miał być subsystem, ale ss było mi potrzebne do super state
+%\newcommand{\ess}[1]
+%{
+%	\ifthenelse{\isempty{#1}}{\mathit{ss}}{\mathit{#1/ss}}
+%}
+
+\newcommand{\ecs}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{cs}}{\mathit{#1/cs}}
+}
+
+\newcommand{\eve}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ve}}{\mathit{#1/ve}}
+}
+
+\newcommand{\ere}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{re}}{\mathit{#1/re}}
+}
+
+\newcommand{\evr}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{vr}}{\mathit{#1/vr}}
+}
+
+\newcommand{\err}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{rr}}{\mathit{#1/rr}}
+}
+
+\newcommand{\esrc}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{src}}{\mathit{#1/src}}
+}
+
+\newcommand{\edst}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{dst}}{\mathit{#1/dst}}
+}
+
+\newcommand{\esm}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{sm}}{\mathit{#1/sm}}
+}
+
+\newcommand{\eib}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ib}}{\mathit{#1/ib}}
+}
+
+\newcommand{\eob}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ob}}{\mathit{#1/ob}}
+}
+
+\newcommand{\emb}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{m}}{\mathit{#1/m}}
+}
+
+\newcommand{\bmb}[1]
+{
+	\ifthenelse{\isempty{#1}}{\bm{\mathit{m}}}{\bm{\mathit{#1/m}}}
+}
+
+\newcommand{\emi}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{mi}}{\mathit{#1/mi}}
+}
+
+\newcommand{\emo}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{mo}}{\mathit{#1/mo}}
+}
+
+\newcommand{\embo}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{mbo}}{\mathit{#1/mbo}}
+}
+
+\newcommand{\eocvs}[1]
+{
+  \ifthenelse{\isempty{#1}}{\mathit{ocvs}}{\mathit{#1/ocvs}}
+}
+
+\newcommand{\eicvs}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{icvs}}{\mathit{#1/icvs}}
+}
+
+\newcommand{\ecv}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{cv}}{\mathit{#1/cv}}
+}
+
+\newcommand{\eocv}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ocv}}{\mathit{#1/ocv}}
+}
+
+\newcommand{\eicv}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{icv}}{\mathit{#1/icv}}
+}
+
+
+\newcommand{\ev}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{v}}{\mathit{#1/v}}
+}
+
+\newcommand{\ecfv}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{cfv}}{\mathit{#1/cfv}}
+}
+
+\newcommand{\es}[1]
+{
+  \ifthenelse{\isempty{#1}}{\mathit{s}}{\mathit{#1/s}}
+}
+
+\newcommand{\ens}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ns}}{\mathit{#1/ns}}
+}
+
+\newcommand{\ees}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{es}}{\mathit{#1/es}}
+}
+
+\newcommand{\eifs}[1]
+{
+  \ifthenelse{\isempty{#1}}{\mathit{ifs}}{\mathit{#1/ifs}}
+}
+
+\newcommand{\effs}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ffs}}{\mathit{#1/ffs}}
+}
+
+\newcommand{\ess}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ss}}{\mathit{#1/ss}}
+}
+
+\newcommand{\ecfs}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{cfs}}{\mathit{#1/cfs}}
+}
+
+\newcommand{\ebb}[1]
+{
+  \ifthenelse{\isempty{#1}}{\mathit{bb}}{\mathit{#1/bb}}
+}
+
+\newcommand{\bbb}[1]
+{
+	\ifthenelse{\isempty{#1}}{\bm{\mathit{bb}}}{\bm{\mathit{#1/bb}}}
+}
+
+\newcommand{\eiterationnumber}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{iterationNumber}}{\mathit{#1/iterationNumber}}
+}
+
+\newcommand{\ep}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{p}}{\mathit{#1/p}}
+}
+
+\newcommand{\bp}[1]
+{
+	\ifthenelse{\isempty{#1}}{\bm{\mathit{p}}}{\bm{\mathit{#1/p}}}
+}
+
+
+\newcommand{\eic}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ic}}{\mathit{#1/ic}}
+}
+
+\newcommand{\et}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{t}}{\mathit{#1/t}}
+}
+
+\newcommand{\ent}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{nt}}{\mathit{#1/nt}}
+}
+
+\newcommand{\eet}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{et}}{\mathit{#1/et}}
+}
+
+\newcommand{\bt}[1]
+{
+	\ifthenelse{\isempty{#1}}{\bm{\mathit{t}}}{\bm{\mathit{#1/t}}}
+}
+
+\newcommand{\etc}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{tc}}{\mathit{#1/tc}}
+}
+
+\newcommand{\eec}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ec}}{\mathit{#1/ec}}
+}
+
+\newcommand{\etf}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{tf}}{\mathit{#1/tf}}
+}
+
+\newcommand{\epf}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{pf}}{\mathit{#1/pf}}
+}
+
+\newcommand{\bpf}[1]
+{
+	\ifthenelse{\isempty{#1}}{\bm{\mathit{pf}}}{\bm{\mathit{#1/pf}}}
+}
+
+\newcommand{\epfc}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{pfc}}{\mathit{#1/pfc}}
+}
+
+\newcommand{\epfo}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{pfo}}{\mathit{#1/pfo}}
+}
+
+\newcommand{\efsm}[1]
+{
+  \ifthenelse{\isempty{#1}}{\mathit{fsm}}{\mathit{#1/fsm}}
+}
+
+\newcommand{\eifsm}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ifsm}}{\mathit{#1/ifsm}}
+}
+
+\newcommand{\esfsm}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{sfsm}}{\mathit{#1/sfsm}}
+}
+
+
+\newcommand{\eit}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{it}}{\mathit{#1/it}}
+}
+
+\newcommand{\eot}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{ot}}{\mathit{#1/ot}}
+}
+
+\newcommand{\emsg}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{msg}}{\mathit{#1/msg}}
+}
+
+\newcommand{\eE}[1]
+{
+	\ifthenelse{\isempty{#1}}{\mathit{E}}{\mathit{#1/E}}
+}
+
+%NAZWY BLOCKÓW - głównie w~celu uniknięcia pzrekłamań w~wielkości liter, literówek oraz odstępów, liczba pojedyncza i~mnoga
+\newcommand{\System}[0]{System}
+\newcommand{\Systems}[0]{Systems}
+
+
+\newcommand{\GroupofSubsystems}[0]{Group of Subsystems}
+\newcommand{\GroupsofSubsystems}[0]{Groups of Subsystems}
+\newcommand{\GroupofAgents}[0]{Group of Agents}
+\newcommand{\GroupsofAgents}[0]{Groups of Agents}
+\newcommand{\Agent}[0]{Agent}
+\newcommand{\Agents}[0]{Agents}
+\newcommand{\Agentapostrofs}[0]{Agent's}
+\newcommand{\EmbodiedAgent}[0]{Embodied Agent}
+\newcommand{\TaskAgent}[0]{task Agent}
+\newcommand{\ManipulatorAgent}[0]{manipulator Agent}
+\newcommand{\GripperAgent}[0]{gripper Agent}
+
+\newcommand{\Link}[0]{Link}
+\newcommand{\Links}[0]{Links}
+\newcommand{\GroupofLinks}[0]{Group of Links}
+\newcommand{\GroupsofLinks}[0]{Groups of Links}
+
+\newcommand{\RealReceptor}[0]{Real Receptor}
+\newcommand{\RealReceptors}[0]{Real Receptors}
+\newcommand{\VirtualReceptor}[0]{Virtual Receptor}
+\newcommand{\VirtualReceptors}[0]{Virtual Receptors}
+\newcommand{\ControlSubsystem}[0]{Control Subsystem}
+\newcommand{\ControlSubsystems}[0]{Control Subsystems}
+\newcommand{\VirtualEffector}[0]{Virtual Effector}
+\newcommand{\VirtualEffectors}[0]{Virtual Effectors}
+\newcommand{\RealEffector}[0]{Real Effector}
+\newcommand{\RealEffectors}[0]{Real Effectors}
+\newcommand{\Subsystem}[0]{Subsystem}
+\newcommand{\Subsystems}[0]{Subsystems}
+\newcommand{\RealSubsystems}[0]{Real Subsystems}
+\newcommand{\VirtualSubsystems}[0]{Virtual Subsystems}
+
+
+\newcommand{\Fsm}[0]{FSM}
+\newcommand{\FiniteStateMachine}[0]{Finite State Machine}
+\newcommand{\FiniteStateMachines}[0]{Finite State Machines}
+\newcommand{\PrimitiveTransitionFunction}[0]{Primitive Transition Function}
+\newcommand{\PrimitiveTransitionFunctions}[0]{Primitive Transition Functions}
+\newcommand{\TransitionFunction}[0]{Transition Function}
+\newcommand{\TransitionFunctions}[0]{Transition Functions}
+\newcommand{\TransitionFunctionCompositionVariable}[0]{Transition Function Composition Variable}
+\newcommand{\TransitionFunctionCompositionVariables}[0]{Transition Function Composition Variables}
+\newcommand{\Predicate}[0]{Predicate}
+\newcommand{\Predicates}[0]{Predicates}
+\newcommand{\FsmTransition}[0]{FSM Transition}
+\newcommand{\FsmTransitions}[0]{FSM Transitions}
+\newcommand{\FsmState}[0]{FSM State}
+\newcommand{\FsmStates}[0]{FSM States}
+\newcommand{\FsmPseudostate}[0]{FSM Pseudostate}
+\newcommand{\FsmPseudostates}[0]{FSM Pseudostates}
+\newcommand{\FsmSuperstate}[0]{FSM Superstate}
+\newcommand{\FsmSuperstates}[0]{FSM Superstates}
+\newcommand{\FsmVertex}[0]{FSM Vertex}
+\newcommand{\FsmVertices}[0]{FSM Vertices}
+\newcommand{\BasicBehaviour}[0]{Basic Behaviour}
+\newcommand{\BasicBehaviours}[0]{Basic Behaviours}
+\newcommand{\InitialCondition}[0]{Initial Condition}
+\newcommand{\InitialConditions}[0]{Initial Conditions}
+%\newcommand{\TransitionCondition}[0]{Transition Condition}
+%\newcommand{\TransitionConditions}[0]{Transition Conditions}
+\newcommand{\TerminalCondition}[0]{Terminal Condition}
+\newcommand{\TerminalConditions}[0]{Terminal Conditions}
+\newcommand{\ErrorCondition}[0]{Error Condition}
+\newcommand{\ErrorConditions}[0]{Error Conditions}
+%%	
+\newcommand{\send}[0]{send()}
+\newcommand{\receive}[0]{receive()}
+\newcommand{\run}[0]{run()}
+\newcommand{\nextvertex}[0]{nextVertex()}
+\newcommand{\execute}[0]{execute()}
+\newcommand{\fun}[0]{fun}
+\newcommand{\bfun}[0]{\bm{fun}}
+\newcommand{\valuefun}[0]{value()} %valuefun bo samo valu ponoć już wcześniej zdefiniowane
+
+%pakiety
+\newcommand{\Modelpkg}[0]{Model}
+\newcommand{\SystemInstancepkg}[0]{System Instance}
+\newcommand{\ManipulationRobotValueTypes}[0]{Manipulation Robot Value Types}
+\newcommand{\CalculationComponentspkg}[0]{Calculation Components}
+\newcommand{\CalculationComponent}[0]{Calculation Component}
+
+\newcommand{\Ib}[0]{Input Buffer}
+\newcommand{\InputBuffer}[0]{Input Buffer}
+\newcommand{\InputBuffers}[0]{Input Buffers}
+
+\newcommand{\Ob}[0]{Output Buffer}
+\newcommand{\OutputBuffer}[0]{Output Buffer}
+\newcommand{\OutputBuffers}[0]{Output Buffers}
+
+\newcommand{\Mb}[0]{Internal Memory}
+\newcommand{\InternalMemory}[0]{Internal Memory}
+\newcommand{\InternalMemories}[0]{Internal Memories}
+
+\newcommand{\p}[0]{\bullet}
+\newcommand{\m}[0]{}
+
+\newcommand{\Buffer}[0]{Buffer}
+\newcommand{\Buffers}[0]{Buffers}
+\newcommand{\ValueType}[0]{valueType}
+\newcommand{\ValueTypes}[0]{valueTypes}
+\newcommand{\Boolean}[0]{Boolean}
+\newcommand{\Booleansmall}[0]{boolean}
+%
+\newcommand{\EARL}[0]{EARL}
+\newcommand{\SysML}[0]{SysML}
+\newcommand{\ROS}[0]{ROS}
+\newcommand{\SciROS}[0]{SciROS}
+\newcommand{\OROCOS}[0]{Orocos}
+\newcommand{\FABRIC}[0]{FABRIC}
+\newcommand{\RobotML}[0]{RobotML}
+\newcommand{\SmartSoft}[0]{SmartSoft}
+\newcommand{\SmartMDSDToolchain}[0]{SmartMDSD Toolchain}
+\newcommand{\BRICKS}[0]{BRICS}
+\newcommand{\BCM}[0]{BCM}
+\newcommand{\CMM}[0]{V3CMM} %jaki pisałem V3CMM to się nie kompilowało
+\newcommand{\MDE}[0]{MDE}
+\newcommand{\UML}[0]{UML}
+\newcommand{\DSL}[0]{DSL}
+\newcommand{\DSLs}[0]{DSLs}
+\newcommand{\MDSDo}[0]{MDSD}
+\newcommand{\MDSD}[0]{MDSD}
+\newcommand{\MDSDs}[0]{MDSDs}
+
+\newcommand{\cyberphysical}[0]{cyber-physical}
+
+
+
+\newcommand{\eblock}[0]{block}
+\newcommand{\operations}[0]{operations}
+\newcommand{\parts}[0]{parts}
+\newcommand{\references}[0]{references}
+
+\newcommand{\CommunicationLinks}[0]{communication Links}
+\newcommand{\CommunicationLink}[0]{communication Link}
+\newcommand{\InterAgentCommunicationLinks}[0]{inter Agent communication Links}
+\newcommand{\InterSubsystemCommunicationLinks}[0]{inter Subsystem communication Links}
+\newcommand{\UnidirectionalCommunicationLinks}[0]{unidirectional communication Links}
+
+\newcommand{\InterAgentCommunication}[0]{inter-agent communication}
+
+\newcommand{\Package}[0]{Package}
+\newcommand{\Requirement}[0]{Requirement}
+\newcommand{\Activity}[0]{Activity}
+\newcommand{\Sequence}[0]{Sequence}
+\newcommand{\StateMachine}[0]{State Machine}
+\newcommand{\UseCase}[0]{Use Case}
+\newcommand{\Parametric}[0]{Parametric}
+\newcommand{\BlockDefinition}[0]{Block Definition}
+\newcommand{\InternalBlock}[0]{Internal Block}
+\newcommand{\Diagram}[0]{Diagram}
+\newcommand{\Diagrams}[0]{Diagrams}
